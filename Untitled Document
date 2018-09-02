@@ -1,0 +1,25 @@
+1. calculate pearson correlation coefficient between 
+trees$Girth and trees$volume of default trees dataset in R
+
+Pl mention what you draw from correlation coefficient
+
+2.Suppose that you want to perform a hypothesis test to help determine whether the correlation between tree girth and tree volume is statistically significant.
+
+Perform a two-sided test of the Pearson's product moment correlation between tree girth and volume at the 5% significance level,
+
+3. Shapiro-Wilk test to help determine whether the tree heights follow a normal distribution. You will use a 5% significance level.
+Check if there is evidence that the tree heights do not follow a normal distribution.
+
+4. Suppose the height of men in the United Kingdom is known to be normally distributed with a mean of 177 centimeters and a standard deviation of 10 centimeters. If you were to select a man from the United Kingdom population at random, what is the probability that he would be more than 200 centimeters tall?
+
+5. Use t-test to compare the mean sepal width for the Versicolor and Virginica species of default iris dataset in R , using a pooled variance estimate. One of the assumptions made for this test was that the variance in sepal width is the same for both species.
+
+Perform F-test to help determine whether the variance in sepal width is the same for the two species. A significance level of 0.05 will be used.
+
+6.use Bartlett’s test to determine whether the variance in weight is the same for all treatment groups in PlantGrowth DataSet included in R
+
+7.Perform an analysis of variance to determine whether differences in plant growth (as measured by weight of batch) between the three groups are statistically significant
+aframe operations
+
+
+http://jobs.jpmorganchase.com/ShowJob/Id/159084/Data%20Analyst
