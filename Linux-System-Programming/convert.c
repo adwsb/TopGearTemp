@@ -10,6 +10,7 @@ static pid_t pid;
 static int onset[2], offset[2], size;
 char buffer[100];
 
+// Function to parse command line arguments
 void parsearg(int argc, char *argv[])
 {
 	if(argc == 4){
@@ -29,9 +30,11 @@ void parsearg(int argc, char *argv[])
 		strcpy(ifile, argv[2]);
 		strcpy(ofile, argv[3]);
 	}
-	else{
+	else
+	{
 		invalid:
-		printf("Invalid");
+		printf("Usage: convert [ -l | -u ] inputfile outputfile");
+		exit(1);
 	}
 }
 
@@ -93,7 +96,7 @@ int main(int argc, char const *argv[])
 	}
 	else
 	{
-	// Patent
+	// Parent
 
 	// File Reading
 		FILE *readfp;
@@ -123,6 +126,7 @@ int main(int argc, char const *argv[])
 		close(onset[0]);
 		write(onset[1], buffer, 100);
 		close(onset[1]);
+		
 		wait(NULL);
 
 	// IPC Receive
