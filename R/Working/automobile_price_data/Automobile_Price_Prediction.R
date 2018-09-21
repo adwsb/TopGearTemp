@@ -40,7 +40,8 @@ features = paste(features[!features %in% "price"], collapse = "+")
 formula = paste("price ~ ", features, collapse = "+")
 formula = as.formula(formula)
 
-NN = neuralnet(formula = formula, hidden = c(10), linear.output = T, threshold = 0.01, stepmax = 1e+9, data = training)
+library(neuralnet)
+NN = neuralnet(formula = formula, hidden = c(20,10,5), linear.output = T, threshold = 0.05, stepmax = 1e+9, data = training)
 plot(NN)
 
 # Prediction
