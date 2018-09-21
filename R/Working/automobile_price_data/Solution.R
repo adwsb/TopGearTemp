@@ -7,6 +7,7 @@ data[data == "?"] = NA
 
 na_count_col = as.data.frame(sapply(data, function(y) sum(length(which(is.na(y))))))
 na_count_col
+
 # I decieded to remove normalized.losses column as the comumn has 41 missing values 
 data = data[,-2]
 
@@ -17,7 +18,7 @@ sum(na_count_row > 0)
 # I decieded to remove 12 rows with NA value from the dataset
 data = data[complete.cases(data),]
 
-# I need to convert categorical variables to numerical data
+# Converting categorical variables to numerical data
 factor_columns = which(as.numeric(sapply(data, is.factor)) == 1)
 for (i in factor_columns) {
   data[,i] = as.numeric(data[,i])
@@ -33,7 +34,7 @@ samples = sample(1:193, 39)
 training = scaled.data[-samples,]
 testing = scaled.data[samples,]
 
-# Model Training with LInear regression
+# Model Training with Artificial Neural Network
 # We take all the features into account
 features = names(scaled.data)
 features = paste(features[!features %in% "price"], collapse = "+")
