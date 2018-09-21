@@ -41,11 +41,18 @@ formula = paste("price ~ ", features, collapse = "+")
 formula = as.formula(formula)
 
 library(neuralnet)
-NN = neuralnet(formula = formula, hidden = c(20,10,5), linear.output = T, threshold = 0.05, stepmax = 1e+9, data = training)
+NN = neuralnet(formula = formula, hidden = c(20,10,5), linear.output = T, threshold = 0.1, stepmax = 1e+9, data = training)
 plot(NN)
+
+##
+## NOTE: Using Neural Network takes quiet a bit of time to train
+## Since method of training is unspecified in the problem statement
+## we could have used linear regression(lm) for simplicity
+##
 
 # Prediction
 predictions = compute(NN, testing[,1:24])
+predictions$net.result
 
 # Error Calculations
 # 1.Mean Absolute Error
